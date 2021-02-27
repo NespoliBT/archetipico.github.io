@@ -1,8 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #d3d3d3;
+    margin: auto;
+}
 
-    margin:auto;
+.content {
+    background-color: #F1F6F9;
+    float: left;
+    height: 500px;
+    width: 80%;
 
+    color: #14274E;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 23px;
+    text-align: center;
+}
+
+.menu {
+    background-color: #9BA4B4;
+    float: left;
+    height: 500px;
+    width: 20%;
+
+    border-right: 3px solid #1d0000;
+
+    color: #06001C;
+    font-family: monospace;
+    font-size: 12px;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.row {
+    clear: both;
+    display: table;
+    
+    width: 100%;
 }
