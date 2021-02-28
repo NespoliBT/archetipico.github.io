@@ -1,12 +1,12 @@
 :root {
-    --content: #000000;
+    --content: #141414;
     --content-background: #fcfcfc;
-    --content-link: #ff0000c9;
+    --content-link: #ff0000cb;
 
     --menu: #ffffff;
-    --menu-background: #000000;
+    --menu-background: #000000e3;
     --menu-link: #ffffff;
-    --menu-text: 1rem;
+    --menu-text: 1.2rem;
 }
 
 * {
@@ -30,7 +30,8 @@ a.m:hover {
     font-size: calc( var(--menu-text) + 0.1rem );
 }
 
-body {
+html, body {
+    height: 100%;
     margin: auto;
 }
 
@@ -48,21 +49,27 @@ body {
 }
 
 .menu {
-    background-image: linear-gradient( var(--menu-background), var(--content-background));
+    background-image: linear-gradient( var(--menu-background), var(--content-background) );
     float: left;
     height: 100%;
     width: 15%;
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: var(--menu-text);
-    padding-left: calc( var(--menu-text) / 10 );
+    line-height: calc( var(--menu-text) * 1.6 );
+    padding-left: calc( var(--menu-text) / 15 );
     text-align: left;
 }
 
 .row {
-    clear: both;
-    display: table;
-    
     height: 100%;
     width: 100%;
+}
+
+ul.m {
+    list-style: none;
+}
+
+ul.c {
+    line-height: 1.8rem;
 }
