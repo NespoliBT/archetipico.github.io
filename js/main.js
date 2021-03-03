@@ -53,7 +53,7 @@ function setColors(mode) {
 function setSizes(device) {
     if ( device === "desktop" ) {
         document.querySelector(":root").style.setProperty("--content-text-size", "1.3rem");
-        document.querySelector(":root").style.setProperty("--menu-padding-left", "1.5rem");
+        document.querySelector(":root").style.setProperty("--menu-padding-left", "1.7rem");
         document.querySelector(":root").style.setProperty("--menu-text-size", "1.2rem");
     } else {
         document.querySelector(":root").style.setProperty("--content-text-size", "0.8rem");
