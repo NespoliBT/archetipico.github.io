@@ -3,35 +3,36 @@
  */
 
 /* Suggests screen size */
-function checkSize() {
+function checkDevice() {
     if ( window.screen.width < 960 ) {
-        alert( "This website is not intended for "
-            + window.screen.width
-            + "px monitors. Try to flip your device horizontally and see if the problem persists" );
+        sessionStorage["device"] = "mobile";
+    } else {
+        sessionStorage["device"] = "desktop";
     }
-
-    localStorage["checkedSize"] = "checked";
 }
 /*
     It runs when the webpage loads: it checks if the screen
     size has already been suggested and loads the predefined theme mode
 */
 function initializer() {
-    if ( localStorage["checkedSize"] !== "checked" ) {
-        checkSize();
+    if ( sessionStorage["device"] === undefined ) {
+        checkDevice();
+        setSizes( sessionStorage["device"] );
+    } else {
+        setSizes( sessionStorage["device"] );
     }
 
-    if ( localStorage["mode"] !== undefined ) {
+    if ( localStorage["mode"] === undefined ) {
+        localStorage["mode"] = "light";
         setColors( localStorage["mode"] );
     } else {
-        localStorage["mode"] = "light";
         setColors( localStorage["mode"] );
     }
 }
 
 /* Sets colors for light and dark mode */
 function setColors(mode) {
-    if (mode == "light") {
+    if ( mode === "light" ) {
         document.querySelector(":root").style.setProperty("--content", "#141414");
         document.querySelector(":root").style.setProperty("--content-background", "#fcfcfc");
         document.querySelector(":root").style.setProperty("--content-link", "#2f00ffe3");
@@ -44,6 +45,19 @@ function setColors(mode) {
     }
 }
 
+/* Sets sizes for different devices */
+function setSizes(device) {
+    if ( device === "desktop" ) {
+        document.querySelector(":root").style.setProperty("--content-text", "1.3rem");
+        document.querySelector(":root").style.setProperty("--menu-padding-left", "1.5rem");
+        document.querySelector(":root").style.setProperty("--menu-text", "1.2rem");
+    } else {
+        document.querySelector(":root").style.setProperty("--content-text", "0.8rem");
+        document.querySelector(":root").style.setProperty("--menu-padding-left", "1rem");
+        document.querySelector(":root").style.setProperty("--menu-text", "0.7rem");
+    }
+}
+
 
 
 /**
@@ -52,7 +66,7 @@ function setColors(mode) {
 
 /* Retrieves changes from the onclick button used for color theme */
 function setMode() {
-    if ( localStorage["mode"] == "light" ) {
+    if ( localStorage["mode"] === "light" ) {
         localStorage["mode"] = "dark";
     } else {
         localStorage["mode"] = "light";
