@@ -2,10 +2,11 @@
     --content: #141414;
     --content-background: #fcfcfc;
     --content-link: #2f00ffe3;
+    --content-text: 1.3rem;
 
-    --menu: #fcfcfc;
+    --menu: var(--content-background);
     --menu-background: #2f00ffe3;
-    --menu-link: #fcfcfc;
+    --menu-link: var(--content-background);
     --menu-text: 1.2rem;
 }
 
@@ -55,8 +56,9 @@ html, body {
 
     color: var(--content);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
-    padding-left: 1rem;
+    font-size: var(--content-text);
+    line-height: calc( var(--content-text) * 1.5 );
+    padding-left: calc( var(--content-text) * 1.5 );
     text-align: left;
 }
 
@@ -71,9 +73,19 @@ html, body {
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: var(--menu-text);
-    line-height: calc( var(--menu-text) * 1.6 );
+    line-height: calc( var(--menu-text) * 1.5 );
     padding-left: calc( var(--menu-text) / 15 );
     text-align: left;
+
+    text-shadow: 0 0 20px var(--menu-background);
+}
+
+p {
+    margin-bottom: calc( var(--content-text) / -1 );
+}
+
+p#footer {
+    margin-bottom: calc( var(--content-text) );
 }
 
 #row {
