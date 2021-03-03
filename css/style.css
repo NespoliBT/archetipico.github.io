@@ -1,14 +1,15 @@
 :root {
-    --content: #141414;
     --content-background: #fcfcfc;
     --content-link: #2f00ffe3;
-    --content-text: 1.3rem;
+    --content-button:var(--content-link);
+    --content-text-color: #141414;
+    --content-text-size: 1.3rem;
 
-    --menu: var(--content-background);
     --menu-background: #2f00ffe3;
     --menu-link: var(--content-background);
     --menu-padding-left: 1.5rem;
-    --menu-text: 1.2rem;
+    --menu-text-color: var(--content-background);
+    --menu-text-size: 1.2rem;
 }
 
 * {
@@ -22,8 +23,12 @@
     text-decoration: none;
 }
 
+.a-logo {
+    transition: font-size 1s ease-out;
+}
+
 .a-logo:hover {
-    font-size: calc( var(--menu-text) + 0.3rem );
+    font-size: calc( var(--menu-text-size) + 0.3rem );
 }
 
 .a-menu {
@@ -33,7 +38,7 @@
 }
 
 .a-menu:hover {
-    font-size: calc( var(--menu-text) + 0.1rem );
+    font-size: calc( var(--menu-text-size) + 0.1rem );
 }
 
 html, body {
@@ -53,12 +58,32 @@ html, body {
 
     height: 100%;
 
-    color: var(--content);
+    color: var(--content-text-color);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: var(--content-text);
-    line-height: calc( var(--content-text) * 1.5 );
-    padding-left: calc( var(--content-text) * 1.5 );
+    font-size: var(--content-text-size);
+    line-height: calc( var(--content-text-size) * 1.5 );
+    padding-left: calc( var(--content-text-size) * 1.5 );
     text-align: left;
+}
+
+#dark-mode-button {
+    background-color: var(--content-button);
+
+    border: none;
+    border-radius: 3em;
+    box-shadow: none;
+    padding: 0.5em 1em;
+
+    color: var(--menu-text-color);
+    font-size: var(--menu-text-size);
+
+    cursor: pointer;
+
+    transition: box-shadow 1s ease-out;
+}
+
+#dark-mode-button:hover {
+    box-shadow: 1px 2px 15px 2px var(--content-button);
 }
 
 #menu {
@@ -71,11 +96,11 @@ html, body {
     width: 7%;
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: var(--menu-text);
-    line-height: calc( var(--menu-text) * 1.5 );
+    font-size: var(--menu-text-size);
+    line-height: calc( var(--menu-text-size) * 1.5 );
     text-align: left;
 
-    transition: width 2.5s ease-out;
+    transition: width 2s ease-out;
 }
 
 #menu:hover {
@@ -87,11 +112,11 @@ html, body {
 }
 
 p {
-    margin-bottom: calc( var(--content-text) / -1 );
+    margin-bottom: calc( var(--content-text-size) / -1 );
 }
 
 p#logos-footer {
-    margin-bottom: calc( var(--content-text) );
+    margin-bottom: calc( var(--content-text-size) );
 }
 
 #row {

@@ -33,28 +33,32 @@ function initializer() {
 /* Sets colors for light and dark mode */
 function setColors(mode) {
     if ( mode === "light" ) {
-        document.querySelector(":root").style.setProperty("--content", "#141414");
         document.querySelector(":root").style.setProperty("--content-background", "#fcfcfc");
         document.querySelector(":root").style.setProperty("--content-link", "#2f00ffe3");
         document.querySelector(":root").style.setProperty("--menu-background", "#2f00ffe3");
+        document.querySelector(":root").style.setProperty("--content-text-color", "#141414");
+
+        document.getElementById("dark-mode-button").innerHTML ="Dark Mode";
     } else {
-        document.querySelector(":root").style.setProperty("--content", "#fcfcfc");
         document.querySelector(":root").style.setProperty("--content-background", "#141414");
         document.querySelector(":root").style.setProperty("--content-link", "#fda2a2e3");
+        document.querySelector(":root").style.setProperty("--content-text-color", "#fcfcfc");
         document.querySelector(":root").style.setProperty("--menu-background", "#fda2a2e3");
+
+        document.getElementById("dark-mode-button").innerHTML = "Light Mode";
     }
 }
 
 /* Sets sizes for different devices */
 function setSizes(device) {
     if ( device === "desktop" ) {
-        document.querySelector(":root").style.setProperty("--content-text", "1.3rem");
+        document.querySelector(":root").style.setProperty("--content-text-size", "1.3rem");
         document.querySelector(":root").style.setProperty("--menu-padding-left", "1.5rem");
-        document.querySelector(":root").style.setProperty("--menu-text", "1.2rem");
+        document.querySelector(":root").style.setProperty("--menu-text-size", "1.2rem");
     } else {
-        document.querySelector(":root").style.setProperty("--content-text", "0.8rem");
+        document.querySelector(":root").style.setProperty("--content-text-size", "0.8rem");
         document.querySelector(":root").style.setProperty("--menu-padding-left", "1rem");
-        document.querySelector(":root").style.setProperty("--menu-text", "0.7rem");
+        document.querySelector(":root").style.setProperty("--menu-text-size", "0.7rem");
     }
 }
 
