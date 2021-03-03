@@ -1,10 +1,10 @@
 :root {
     --content: #141414;
     --content-background: #fcfcfc;
-    --content-link: #ff0000da;
+    --content-link: #2f00ffe3;
 
     --menu: #ffffff;
-    --menu-background: #000000e3;
+    --menu-background: #2f00ffe3;
     --menu-link: #ffffff;
     --menu-text: 1.2rem;
 }
