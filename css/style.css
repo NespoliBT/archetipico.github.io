@@ -50,9 +50,7 @@ html, body {
 
     overflow-y: scroll;
 
-    float: left;
     height: 100%;
-    width: 85%;
 
     color: var(--content);
     font-family: Arial, Helvetica, sans-serif;
@@ -69,22 +67,31 @@ html, body {
 
     float: left;
     height: 100%;
-    width: 15%;
+    width: 7%;
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: var(--menu-text);
     line-height: calc( var(--menu-text) * 1.5 );
     padding-left: calc( var(--menu-text) / 15 );
     text-align: left;
-
     text-shadow: 0 0 20px var(--menu-background);
+
+    transition: width 2.5s ease-out;
+}
+
+#menu:hover {
+    width: 17%;
+}
+
+#menu:hover #ul-menu {
+    opacity: 1;
 }
 
 p {
     margin-bottom: calc( var(--content-text) / -1 );
 }
 
-p#footer {
+p#logos-footer {
     margin-bottom: calc( var(--content-text) );
 }
 
@@ -93,8 +100,13 @@ p#footer {
     width: 100%;
 }
 
-.ul-menu {
+#ul-menu {
+    opacity: 0;
+
     list-style: none;
+
+    transition: opacity 0.7s ease-in;
+    transition-delay: 0.2s;
 }
 
 .ul-content {

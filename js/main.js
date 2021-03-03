@@ -1,3 +1,7 @@
+/**
+ * Commands always executed
+ */
+
 /* Suggests screen size */
 function checkSize() {
     if ( window.screen.width < 960 ) {
@@ -39,6 +43,12 @@ function setColors(mode) {
         document.querySelector(":root").style.setProperty("--menu-background", "#fda2a2e3");
     }
 }
+
+
+
+/**
+ * Commands that may be executed
+ */
 
 /* Retrieves changes from the onclick button used for color theme */
 function setMode() {
