@@ -53,9 +53,10 @@ into the js/main.js proper functions */
 
     color: var(--menu-background);
     font-size: var(--content-text-size);
+    opacity: 1;
     text-shadow: 1px 1px 2px var(--menu-background);
 
-    transition: left 2s ease-out;
+    transition: left 2s ease-out, opacity 2s ease-out;
 }
 
 html, body {
@@ -126,6 +127,8 @@ html, body {
 
 #menu:hover #arrow-menu {
     left: calc( var(--menu-hovered-width) - 1em );
+    
+    opacity: 0;
 }
 
 #menu:hover #ul-menu {
