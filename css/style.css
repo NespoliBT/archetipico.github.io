@@ -1,3 +1,6 @@
+/* IMPORTANT: always remember that if you add a variable to root and
+you want to resize it through the devices, you have to add the variable
+into the js/main.js proper functions */
 :root {
     --content-background: #fcfcfc;
     --content-link: #2f00ffe3;
@@ -6,6 +9,8 @@
     --content-text-size: 1.3rem;
 
     --menu-background: #2f00ffe3;
+    --menu-hovered-width: 17%;
+    --menu-initial-width: 7%;
     --menu-link: var(--content-background);
     --menu-padding-left: 1.7rem;
     --menu-text-color: var(--content-background);
@@ -93,7 +98,7 @@ html, body {
 
     float: left;
     height: 100%;
-    width: 7%;
+    width: var(--menu-initial-width);
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: var(--menu-text-size);
@@ -104,7 +109,7 @@ html, body {
 }
 
 #menu:hover {
-    width: 17%;
+    width: var(--menu-hovered-width);
 }
 
 #menu:hover #ul-menu {
