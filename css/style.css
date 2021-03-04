@@ -46,6 +46,18 @@ into the js/main.js proper functions */
     font-size: calc( var(--menu-text-size) + 0.1rem );
 }
 
+#arrow-menu {
+    bottom: 1.5rem;
+    left: calc( var(--menu-initial-width) - 1em );
+    position: absolute;
+
+    color: var(--menu-background);
+    font-size: var(--content-text-size);
+    text-shadow: 1px 1px 2px var(--menu-background);
+
+    transition: left 2s ease-out;
+}
+
 html, body {
     background-attachment: fixed;
     background-image: url( "https://images.pexels.com/photos/6120151/pexels-photo-6120151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" );
@@ -110,6 +122,10 @@ html, body {
 
 #menu:hover {
     width: var(--menu-hovered-width);
+}
+
+#menu:hover #arrow-menu {
+    left: calc( var(--menu-hovered-width) - 1em );
 }
 
 #menu:hover #ul-menu {
