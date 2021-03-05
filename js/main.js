@@ -80,7 +80,7 @@ function setTitle() {
         .pop()
         .split(".")[0];
 
-    file_name === "index" ? file_name = "home" : file_name = file_name;
+    file_name === "index" || file_name === "" ? file_name = "home" : file_name = file_name;
 
     var title = file_name[0].toUpperCase() + file_name.substring(1);
     
