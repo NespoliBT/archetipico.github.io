@@ -15,6 +15,9 @@ function checkDevice() {
     size has already been suggested and loads the predefined theme mode
 */
 function initializer() {
+    setTitle();
+    setTitleButton();
+
     if ( sessionStorage["device"] === undefined ) {
         checkDevice();
         setSizes( sessionStorage["device"] );
@@ -27,7 +30,7 @@ function initializer() {
         setColors( localStorage["mode"] );
     } else {
         setColors( localStorage["mode"] );
-    }
+    }    
 }
 
 /* Sets colors for light and dark mode */
@@ -70,11 +73,43 @@ function setSizes(device) {
     }
 }
 
+/* Sets page title */
+function setTitle() {
+    var file_name = window.location.pathname
+        .split("/")
+        .pop()
+        .split(".")[0];
+
+    file_name === "index" ? file_name = "home" : file_name = file_name;
+
+    var title = file_name[0].toUpperCase() + file_name.substring(1);
+    
+    document.getElementById("title").innerHTML = "<h1>" + title + "</h1>";
+}
+
+/* Sets Dark Mode button */
+function setTitleButton() {
+    document.getElementById("title-button").innerHTML = '<button class="generic-button" id="dark-mode-button" type="button" onclick="setMode()">Dark Mode</button>';
+}
+
+
 
 
 /**
  * Commands that may be executed
  */
+
+/* Clears web storage */
+function clearStorage() {
+    localStorage.clear();
+    sessionStorage.clear();
+
+    document.getElementById("web-storage-button").innerHTML = "Web storage deleted";
+    
+    sleep(2000).then( () => {
+        document.getElementById("web-storage-button").innerHTML = "Delete web storage";
+    } ); 
+}
 
 /* Retrieves changes from the onclick button used for color theme */
 function setMode() {
@@ -85,4 +120,9 @@ function setMode() {
     }
 
     location.reload();
+}
+
+/* Simple sleep function */
+function sleep(t) {
+    return new Promise( resolve => setTimeout( resolve, t ) );
 }

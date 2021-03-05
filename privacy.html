@@ -29,11 +29,21 @@
                 </div>
 
                 <p>
-                    Welcome to my page! I created this to learn how to build a website from scratch.<br>
-                    <a class="a-content" href="https://github.com/archetipico/archetipico.github.io" rel="noopener noreferrer nofollow" target="_blank">Fork this website on Github</a>
-                    <br>
-
+                   Visiting this website you're subjected to GitHub Pages privacy policies.<br><br>
+                   This website uses web storage to enhance its functionalities.
+                   Of course no sensitive data is stored on the web storage, but rather things like:
                 </p>
+
+                <ul>
+                    <li> <span style="font-family:monospace;">sessionStorage["device"]</span>: to understand what device you're using, so the page can resize </li>
+                    <li> <span style="font-family:monospace;">localStorage["mode"]</span>: to remember if you are a dark mode or light mode user </li>
+                </ul>
+
+                <p>
+                    If you want to delete your web storage, just delete it using your browser console or click this button:<br><br>
+                </p>
+
+                <button class="generic-button" id="web-storage-button" type="button" onclick="clearStorage()">Delete web storage</button>
             </div>
         </div>
 
