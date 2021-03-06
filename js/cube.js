@@ -13,7 +13,10 @@ function draw() {
     document.getElementById("scene").appendChild( renderer.domElement );
 
     const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial( { color: color, wireframe: true } );
+    const loader = new THREE.TextureLoader();
+    const material = new THREE.MeshBasicMaterial({
+        map: loader.load("https://avatars.githubusercontent.com/u/43927507?s=460&u=5c72f6e304ac8821cb2acb82a2fde3a2d962949a&v=4"),
+    });
     const cube = new THREE.Mesh( geometry, material );
     scene.add( cube );
 
