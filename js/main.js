@@ -34,6 +34,20 @@ function initializer() {
     }    
 }
 
+/* Returns title and sets it as browser tab title */
+function returnTitle() {
+    var file_name = window.location.pathname
+        .split("/")
+        .pop()
+        .split(".")[0];
+
+    file_name === "index" || file_name === "" ? file_name = "home" : file_name = file_name;
+
+    var title = file_name[0].toUpperCase() + file_name.substring(1);
+    document.title = title;
+    return title;
+}
+
 /* Sets colors for light and dark mode */
 function setColors(mode) {
     try {
@@ -84,18 +98,9 @@ function setSizes(device) {
     }
 }
 
-/* Sets page title */
+/* Sets page title (not in the browser tab, but in the page itself) */
 function setTitle() {
-    var file_name = window.location.pathname
-        .split("/")
-        .pop()
-        .split(".")[0];
-
-    file_name === "index" || file_name === "" ? file_name = "home" : file_name = file_name;
-
-    var title = file_name[0].toUpperCase() + file_name.substring(1);
-    
-    document.getElementById("title").innerHTML = "<h1>" + title + "</h1>";
+    document.getElementById("title").innerHTML = "<h1>" + returnTitle() + "</h1>";
 }
 
 /* Sets Dark Mode button */
