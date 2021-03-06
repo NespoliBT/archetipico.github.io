@@ -7,10 +7,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-        <script src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
     </head>
 
-    <body>
+    <body onload="initializer()">
         <div id="row">
             <div id="menu"></div>
 
@@ -20,27 +20,25 @@
                     <div id="title-button"></div>
                 </div>
 
-                <p>
-                   Visiting this website you're subjected to GitHub Pages privacy policies.<br><br>
-                   This website uses web storage to enhance its functionalities.
-                   Of course no sensitive data is stored on the web storage, but rather things like:
-                </p>
+                <div id="content-text">
+                    <p>
+                    Visiting this website you're subjected to GitHub Pages privacy policies.<br><br>
+                    This website uses web storage to enhance its functionalities.
+                    Of course no sensitive data is stored on the web storage, but rather things like:
+                    </p>
 
-                <ul>
-                    <li> <span style="font-family:monospace;">sessionStorage["device"]</span>: to understand what device you're using, so the page can resize </li>
-                    <li> <span style="font-family:monospace;">localStorage["mode"]</span>: to remember if you are a dark mode or light mode user </li>
-                </ul>
+                    <ul>
+                        <li> <span style="font-family:monospace;">sessionStorage["device"]</span>: to understand what device you're using, so the page can resize </li>
+                        <li> <span style="font-family:monospace;">localStorage["mode"]</span>: to remember if you are a dark mode or light mode user </li>
+                    </ul>
 
-                <p>
-                    If you want to delete your web storage, just delete it using your browser console or click this button:<br><br>
-                </p>
+                    <p>
+                        If you want to delete your web storage, just delete it using your browser console or click this button:<br><br>
+                    </p>
 
-                <button class="generic-button" id="web-storage-button" type="button" onclick="clearStorage()">Delete web storage</button>
+                    <button class="generic-button" id="web-storage-button" type="button" onclick="clearStorage()">Delete web storage</button>
+                </div>
             </div>
         </div>
-
-        <script>
-            initializer();
-        </script>
     </body>
 </html>

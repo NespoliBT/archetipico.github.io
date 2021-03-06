@@ -63,7 +63,8 @@ function setMenu() {
         + '<li> <a class="a-menu" href="./about.html">About</a> </li>'
         + '<li> <a class="a-menu" href="./index.html">Home</a> </li>'
         + '<li> <a class="a-menu" href="./privacy.html">Privacy</a> </li>'
-        + '</ul><p id="arrow-menu">&#10095;</p>';
+        + '</ul>'
+        + '<p id="arrow-menu">&#10095;</p>';
 }
 
 /* Sets sizes for different devices */
@@ -99,7 +100,8 @@ function setTitle() {
 
 /* Sets Dark Mode button */
 function setTitleButton() {
-    document.getElementById("title-button").innerHTML = '<button class="generic-button" id="dark-mode-button" type="button" onclick="setMode()">Dark Mode</button>';
+    document.getElementById("title-button").innerHTML = '<button class="generic-button"'
+        + 'id="dark-mode-button" type="button" onclick="setMode()">Dark Mode</button>';
 }
 
 

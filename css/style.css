@@ -85,6 +85,10 @@ body, html {
     text-align: left;
 }
 
+#content-text {
+    margin-bottom: calc( var(--content-text-size) * 1.5 );
+}
+
 #content-title {
     height: 10%;
 }
@@ -156,6 +160,11 @@ p {
 #row {
     height: 100%;
     width: 100%;
+}
+
+#scene {
+    height: 50%;
+    width: 80%;
 }
 
 #title {

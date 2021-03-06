@@ -7,10 +7,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-        <script src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/test.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"></script>
     </head>
 
-    <body>
+    <body onload="initializer(); main()">
         <div id="row">
             <div id="menu"></div>
 
@@ -20,15 +22,15 @@
                     <div id="title-button"></div>
                 </div>
 
-                <p>
-                    Welcome to my page! I created this to learn how to build a website from scratch.<br>
-                    <a class="a-content" href="https://github.com/archetipico/archetipico.github.io" rel="noopener noreferrer nofollow" target="_blank">Fork this website on Github</a>
-                </p>
+                <div id="content-text">
+                    <p>
+                        Welcome to my page! I created this to learn how to build a website from scratch.<br>
+                        <a class="a-content" href="https://github.com/archetipico/archetipico.github.io" rel="noopener noreferrer nofollow" target="_blank">Fork this website on Github</a>
+                    </p>
+                </div>
+
+                <div id="scene"></div>
             </div>
         </div>
-
-        <script>
-            initializer();
-        </script>
     </body>
 </html>
