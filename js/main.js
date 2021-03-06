@@ -15,6 +15,7 @@ function checkDevice() {
     size has already been suggested and loads the predefined theme mode
 */
 function initializer() {
+    setMenu();
     setTitle();
     setTitleButton();
 
@@ -54,6 +55,15 @@ function setColors(mode) {
     } catch (e) {
         console.log("Dark Mode Button does not exist on this html");
     }
+}
+
+/* Sets page menu */
+function setMenu() {
+    document.getElementById("menu").innerHTML = '<ul id="ul-menu">'
+        + '<li> <a class="a-menu" href="./about.html">About</a> </li>'
+        + '<li> <a class="a-menu" href="./index.html">Home</a> </li>'
+        + '<li> <a class="a-menu" href="./privacy.html">Privacy</a> </li>'
+        + '</ul><p id="arrow-menu">&#10095;</p>';
 }
 
 /* Sets sizes for different devices */
