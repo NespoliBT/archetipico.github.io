@@ -15,6 +15,7 @@ function checkDevice() {
     size has already been suggested and loads the predefined theme mode
 */
 function initializer() {
+    setHead();
     setMenu();
     setTitle();
     setTitleButton();
@@ -43,9 +44,7 @@ function returnTitle() {
 
     file_name === "index" || file_name === "" ? file_name = "home" : file_name = file_name;
 
-    var title = file_name[0].toUpperCase() + file_name.substring(1);
-    document.title = title;
-    return title;
+    return file_name[0].toUpperCase() + file_name.substring(1);
 }
 
 /* Sets colors for light and dark mode */
@@ -69,6 +68,11 @@ function setColors(mode) {
     } catch (e) {
         console.log("Dark Mode Button does not exist on this html");
     }
+}
+
+function setHead() {
+    document.head.innerHTML += '<title>' + returnTitle() + '</title>'
+        + '<link rel="icon" href="https://avatars.githubusercontent.com/u/43927507?s=460&u=5c72f6e304ac8821cb2acb82a2fde3a2d962949a&v=4" type="image/icon type">';
 }
 
 /* Sets page menu */
