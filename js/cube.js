@@ -1,6 +1,5 @@
 function draw() {
     const bgColor = document.querySelector(":root").style.getPropertyValue("--content-link");
-    const color = document.querySelector(":root").style.getPropertyValue("--content-text-color");
     const height = document.getElementById("scene").clientHeight;
     const width = document.getElementById("scene").clientWidth;
     
@@ -12,6 +11,8 @@ function draw() {
     renderer.setClearColor( bgColor.substring(0, 7), 0.05 );
     document.getElementById("scene").appendChild( renderer.domElement );
 
+    const controls = new THREE.OrbitControls( camera, renderer.domElement );
+
     const geometry = new THREE.BoxGeometry();
     const loader = new THREE.TextureLoader();
     const material = new THREE.MeshBasicMaterial({
@@ -21,12 +22,15 @@ function draw() {
     scene.add( cube );
 
     camera.position.z = 5;
+    cube.rotation.x = - Math.PI / 4;
+    cube.rotation.y = Math.PI / 6;
+    cube.rotation.z = Math.PI / 6;
 
+    renderer.render( scene, camera );
     const animate = function () {
         requestAnimationFrame( animate );
 
-        cube.rotation.x += 0.005;
-        cube.rotation.y += 0.005;
+        controls.update();
 
         renderer.render( scene, camera );
     };
