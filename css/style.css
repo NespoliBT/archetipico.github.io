@@ -3,19 +3,10 @@ you want to resize it through the devices, you have to add the variable
 into the js/main.js proper functions */
 
 :root {
-    --content-background: #fcfcfc;
-    --content-link: #2f00ffe3;
     --content-button:var(--content-link);
-    --content-text-color: #141414;
-    --content-text-size: 1.3rem;
 
-    --menu-background: #2f00ffe3;
-    --menu-hovered-width: 17%;
-    --menu-initial-width: 7%;
     --menu-link: var(--content-background);
-    --menu-padding-left: 1.7rem;
     --menu-text-color: var(--content-background);
-    --menu-text-size: 1.2rem;
 }
 
 body, html {
@@ -67,7 +58,7 @@ body #row {
     letter-spacing: 0.03em;
 }
 
-#content .content-code pre ul {
+#content .content-code ul {
     padding-left: 0;
 
     line-height: 0.3em;
