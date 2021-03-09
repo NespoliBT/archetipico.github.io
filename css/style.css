@@ -18,48 +18,6 @@ into the js/main.js proper functions */
     --menu-text-size: 1.2rem;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-.a-content, .a-logo {
-    color: var(--content-link);
-
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-.a-logo {
-    transition: font-size 1s ease-out;
-}
-
-.a-logo:hover {
-    font-size: calc( var(--menu-text-size) + 0.3rem );
-}
-
-.a-menu {
-    color: var(--menu-link);
-
-    text-decoration: none;
-}
-
-.a-menu:hover {
-    font-size: calc( var(--menu-text-size) + 0.1rem );
-}
-
-#arrow-menu {
-    bottom: 1.5rem;
-    left: calc( var(--menu-initial-width) - 1em );
-    position: absolute;
-
-    color: var(--menu-background);
-    font-size: var(--content-text-size);
-    opacity: 1;
-    text-shadow: 1px 1px 2px var(--menu-background);
-
-    transition: left 2s ease-out, opacity 2s ease-out;
-}
-
 body, html {
     background-attachment: fixed;
     background-image: url( "https://images.pexels.com/photos/6120151/pexels-photo-6120151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" );
@@ -69,6 +27,15 @@ body, html {
     height: 100%;
     margin: auto;
 }
+
+body #row {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* CONTENT */
 
 #content { 
     background-color: var(--content-background);
@@ -85,20 +52,62 @@ body, html {
     text-align: left;
 }
 
-#content-text {
+#content a {
+    color: var(--content-link);
+
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#content .content-code {
+    height: auto;
+    width: 100%;
+
+    color: var(--content-link);
+    letter-spacing: 0.03em;
+}
+
+#content .content-code pre ul {
+    padding-left: 0;
+
+    line-height: 0.3em;
+    list-style-type: none;
+}
+
+#content #content-scene {
+    height: 70%;
+    width: 70%;
+}
+
+#content .content-text {
     margin-bottom: calc( var(--content-text-size) * 1.5 );
 }
 
-#content-title {
+#content .content-text ul {
+    line-height: 1.8rem;
+}
+
+#content #content-title {
     height: 10%;
 }
 
-#dark-mode-button {
+#content #content-title #title {
+    float: left;
+    height: 100%;
+}
+
+#content #content-title #title-button {
+    height: 100%;
+    
+    text-align: right;
+}
+
+#content #dark-mode-button {
     margin-right: 3em;
     margin-top: 2em;
 }
 
-.generic-button {
+#content .generic-button {
     background-color: var(--content-button);
 
     border: none;
@@ -114,13 +123,29 @@ body, html {
     transition: box-shadow 1s ease-out;
 }
 
-.generic-button:hover {
+#content .generic-button:hover {
     box-shadow: 1px 2px 15px 2px var(--content-button);
 }
 
-#logos-footer {
+#content #logos-footer {
     margin-bottom: calc( var(--content-text-size) );
 }
+
+#content #logos-footer .a-logo {
+    transition: font-size 1s ease-out;
+}
+
+#content #logos-footer .a-logo:hover {
+    font-size: calc( var(--menu-text-size) + 0.3rem );
+}
+
+#content p {
+    margin-bottom: calc( var(--content-text-size) / -1 );
+}
+
+
+
+/* MENU */
 
 #menu {
     background-attachment: fixed;
@@ -139,6 +164,19 @@ body, html {
     transition: width 2s ease-out;
 }
 
+#menu #arrow-menu {
+    bottom: 1.5rem;
+    left: calc( var(--menu-initial-width) - 1em );
+    position: absolute;
+
+    color: var(--menu-background);
+    font-size: var(--content-text-size);
+    opacity: 1;
+    text-shadow: 1px 1px 2px var(--menu-background);
+
+    transition: left 2s ease-out, opacity 2s ease-out;
+}
+
 #menu:hover {
     width: var(--menu-hovered-width);
 }
@@ -149,36 +187,21 @@ body, html {
     opacity: 0;
 }
 
-#menu:hover #ul-menu {
+#menu:hover ul {
     opacity: 1;
 }
 
-p {
-    margin-bottom: calc( var(--content-text-size) / -1 );
+#menu a {
+    color: var(--menu-link);
+
+    text-decoration: none;
 }
 
-#row {
-    height: 100%;
-    width: 100%;
+#menu a:hover {
+    font-size: calc( var(--menu-text-size) + 0.1rem );
 }
 
-#scene {
-    height: 70%;
-    width: 70%;
-}
-
-#title {
-    float: left;
-    height: 100%;
-}
-
-#title-button {
-    height: 100%;
-    
-    text-align: right;
-}
-
-#ul-menu {
+#menu ul {
     opacity: 0;
 
     list-style: none;
@@ -187,8 +210,4 @@ p {
 
     transition: opacity 0.7s ease-in;
     transition-delay: 0.2s;
-}
-
-.ul-content {
-    line-height: 1.8rem;
 }

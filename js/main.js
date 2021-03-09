@@ -77,10 +77,10 @@ function setHead() {
 
 /* Sets page menu */
 function setMenu() {
-    document.getElementById("menu").innerHTML = '<ul id="ul-menu">'
-        + '<li> <a class="a-menu" href="./about.html">About</a> </li>'
-        + '<li> <a class="a-menu" href="./index.html">Home</a> </li>'
-        + '<li> <a class="a-menu" href="./privacy.html">Privacy</a> </li>'
+    document.getElementById("menu").innerHTML = '<ul>'
+        + '<li> <a href="./about.html">About</a> </li>'
+        + '<li> <a href="./index.html">Home</a> </li>'
+        + '<li> <a href="./privacy.html">Privacy</a> </li>'
         + '</ul>'
         + '<p id="arrow-menu">&#10095;</p>';
 }

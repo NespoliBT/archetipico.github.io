@@ -1,7 +1,7 @@
 function draw() {
     const bgColor = document.querySelector(":root").style.getPropertyValue("--content-link");
-    const height = document.getElementById("scene").clientHeight;
-    const width = document.getElementById("scene").clientWidth;
+    const height = document.getElementById("content-scene").clientHeight;
+    const width = document.getElementById("content-scene").clientWidth;
     
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera( 25, width / height, 0.1, 1000 );
@@ -9,7 +9,7 @@ function draw() {
     const renderer = new THREE.WebGLRenderer( { alpha: true } );
     renderer.setSize( width, height );
     renderer.setClearColor( bgColor.substring(0, 7), 0.05 );
-    document.getElementById("scene").appendChild( renderer.domElement );
+    document.getElementById("content-scene").appendChild( renderer.domElement );
 
     const controls = new THREE.OrbitControls( camera, renderer.domElement );
 
