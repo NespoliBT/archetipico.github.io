@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./css/style.css">
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-        <script src="./js/main.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cube.css">
+    <script src="./js/main.js"></script>
+</head>
 
-    <body onload="initializer()">
-        <div id="row">
-            <div id="menu"></div>
+<body>
+    <div class="header">
+        <div id="openMenu"></div>
+        <div id="themeSwitch" theme="dark">盛</div>
+    </div>
 
-            <div id="content">
-                <div id="content-title">
-                    <div id="title"></div>
-                    <div id="title-button"></div>
-                </div>
+    <div id="menu">
+        <ul>
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/about.html">
+                <li>About</li>
+            </a>
+            <a href="/privacy.html">
+                <li>Privacy</li>
+            </a>
+        </ul>
+    </div>
 
-                <div class="content-text">
-                    <p>
-                    Visiting this website you're subjected to GitHub Pages privacy policies.<br><br>
-                    This website uses web storage to enhance its functionalities.
-                    Of course no sensitive data is stored on the web storage, but rather things like:
-                    </p>
+    <div class="content">
+        <div class="title">Privacy</div>
 
-                    <ul>
-                        <li> <span style="font-family:monospace;">sessionStorage["device"]</span>: to understand what device you're using, so the page can resize </li>
-                        <li> <span style="font-family:monospace;">localStorage["mode"]</span>: to remember if you are a dark mode or light mode user </li>
-                    </ul>
-
-                    <p>
-                        If you want to delete your web storage, just delete it using your browser console or click this button:<br><br>
-                    </p>
-
-                    <button class="generic-button" id="web-storage-button" type="button" onclick="clearStorage()">Delete web storage</button>
-                </div>
-            </div>
+        <div class="subtitle">
+            Visiting this website you're subjected to GitHub Pages privacy policies.
         </div>
-    </body>
+
+        <div class="text">
+            This website uses web storage to enhance its functionalities.
+            Of course no sensitive data is stored on the web storage, but rather things like:
+
+            <ul>
+                <li> <span style="font-family:monospace;">sessionStorage["device"]</span>: to understand what device you're using, so the page can resize </li>
+                <li> <span style="font-family:monospace;">localStorage["mode"]</span>: to remember if you are a dark mode or light mode user </li>
+            </ul>
+
+            If you want to delete your web storage, just delete it using your browser console or click this button:
+        </div>
+
+
+        <button id="clearWebStorage">Delete web storage</button>
+        <div id="clearWebStoragePopup">Web Storage Deleted!</div>
+    </div>
+</body>
+
 </html>

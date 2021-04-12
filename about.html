@@ -1,85 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./css/all.min.css">
-        <link rel="stylesheet" href="./css/style.css">
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cube.css">
+    <script src="./js/main.js"></script>
+</head>
 
-        <script src="./js/main.js"></script>
-    </head>
+<body>
+    <div class="header">
+        <div id="openMenu"></div>
+        <div id="themeSwitch" theme="dark">盛</div>
+    </div>
 
-    <body onload="initializer()">
-        <div id="row">
-            <div id="menu"></div>
+    <div id="menu">
+        <ul>
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/about.html">
+                <li>About</li>
+            </a>
+            <a href="/privacy.html">
+                <li>Privacy</li>
+            </a>
+        </ul>
+    </div>
 
-            <div id="content">
-                <div id="content-title">
-                    <div id="title"></div>
-                    <div id="title-button"></div>
-                </div>
+    <div class="content">
+        <div class="title">About</div>
 
-                <div class="content-text">
-                    <p>
-                        I was born in 1997 in <a class="a-content" href="https://en.wikipedia.org/wiki/Milan" rel="noopener noreferrer nofollow" target="_blank">Milan</a>.
-                        I graduated at a <a class="a-content" href="https://en.wikipedia.org/wiki/Lyceum#Italy" rel="noopener noreferrer nofollow" target="_blank">Scientific Lyceum</a>, I've always been interested in studying math and sciences.
-                        I then decided to be a Computer Science student @ <a class="a-content" href="https://en.wikipedia.org/wiki/University_of_Milan" rel="noopener noreferrer nofollow" target="_blank">UniMi</a>.<br><br>
-                        I wanted to learn about information security but I ended liking pretty much everything about the computer science world.
-                        While studying for university, I work as Systems Analyst for an accountant and start upper business.<br><br>
-                        I like to learn, experiment and challenge myself.<br><br>
-                        These are my areas of interest, and their specific branches that I like to analyze:
-                    </p>
+        <div class="text">
+            I was born in 1997 in <a class="a-content" href="https://en.wikipedia.org/wiki/Milan" rel="noopener noreferrer nofollow" target="_blank">Milan</a>.
+            I graduated at a <a class="a-content" href="https://en.wikipedia.org/wiki/Lyceum#Italy" rel="noopener noreferrer nofollow" target="_blank">Scientific Lyceum</a>, I've always been interested in studying math and sciences.
+            I then decided to be a Computer Science student @ <a class="a-content" href="https://en.wikipedia.org/wiki/University_of_Milan" rel="noopener noreferrer nofollow" target="_blank">UniMi</a>.<br><br>
+            I wanted to learn about information security but I ended liking pretty much everything about the computer science world.
+            While studying for university, I work as Systems Analyst for an accountant and start upper business.<br><br>
+            I like to learn, experiment and challenge myself.<br><br>
+            These are my areas of interest, and their specific branches that I like to analyze:
 
-                    <p>
-                        <ul>
-                            <li> Computational Statistics </li>
-                            <ul>
-                                <li> Data Visualization </li>
-                                <li> Machine Learning </li>
-                            </ul>
 
-                            <li> Information Security </li>
-                            <ul>
-                                <li> Cryptography </li>
-                                <li> Embedded Systems security </li> 
-                                <li> Intrusion Detection Systems </li>
-                                <li> White-box and Black-box testing </li>
-                            </ul>
-                            
-                            <li> Other interests </li>
-                            <ul>
-                                <li> Computer Graphics </li>
-                                <li> Mathematical Logic </li>
-                            </ul> 
-                        </ul>
+            <ul>
+                <li>Computational Statistics</li>
+                <ul>
+                    <li>Data Visualization</li>
+                    <li>Machine Learning</li>
+                </ul>
 
-                        <br>
+                <li>Information Security</li>
+                <ul>
+                    <li>Cryptography</li>
+                    <li>Embedded Systems security</li>
+                    <li>Intrusion Detection Systems</li>
+                    <li>White-box and Black-box testing</li>
+                </ul>
 
-                        Technologies I'm familiar with:
-                    </p>
-                    
-                    <p>
-                        <ul>
-                            <li> C </li>
-                            <li> Java </li>
-                            <li> Lua </li>
-                            <li> MIPS </li>
-                            <li> Python </li>
-                            <li> SQL </li>
-                        </ul>
+                <li>Other interests</li>
+                <ul>
+                    <li>Computer Graphics</li>
+                    <li>Mathematical Logic</li>
+                </ul>
+            </ul>
+            <br><br>
 
-                        <br>
-                    </p>
-
-                    <p id=logos-footer>
-                        Follow me on:<br>
-                        <a class="a-logo" href="https://github.com/archetipico" rel="noopener noreferrer nofollow" target="_blank"> <i class="fab fa-3x fa-github"></i> </a>
-                        <a class="a-logo" href="https://www.linkedin.com/in/edoardoferrari/" rel="noopener noreferrer nofollow" target="_blank"> <i class="fab fa-3x fa-linkedin"></i> </a>
-                        <a class="a-logo" href="https://open.spotify.com/user/b8mytqbbvoje16hmwemw08k46?si=6wSYJtuRTDCMrDNXgblOzQ" rel="noopener noreferrer nofollow" target="_blank"> <i class="fab fa-3x fa-spotify"></i> </a>
-                    </p>
-                </div>
-            </div>
+            Technologies I'm familiar with:
+            <ul>
+                <li>C</li>
+                <li>Java</li>
+                <li>Lua</li>
+                <li>MIPS</li>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
         </div>
-    </body>
+
+        <div class="social">
+            Follow me on:<br>
+            <a href="https://github.com/archetipico"></a>
+            <a href="https://www.linkedin.com/in/edoardoferrari/"></a>
+            <a href="https://open.spotify.com/user/b8mytqbbvoje16hmwemw08k46?si=6wSYJtuRTDCMrDNXgblOzQ"></a>
+        </div>
+
+    </div>
+</body>
+
 </html>
